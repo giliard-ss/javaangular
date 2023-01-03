@@ -1,5 +1,14 @@
+###Banco de dados
 
-### Initialize
+Executar o prompt e então executar os comandos abaixo para iniciar o banco de dados de exemplo:
+
+> psql -U postgres;
+
+> create database example;
+
+As entidades serão criadas pelo hibernate.
+
+### Angular
 Para inicializar o frontend:
 > npm start
 
@@ -12,3 +21,5 @@ Os arquivos compilados em angular ficarão em frontend/dist e a compilação do bac
 ### Inicializar o war sem servidor de aplicação
 Para inicializar diretamente , é preciso alterar o pom.xml do backend, de war para jar. Após isso é só executar o comando abaixo para executar o jar.
 >java -jar project.jar
+
+Se for pela IDE basta executar o método main para rodar o projeto com o server embutido no projeto.
