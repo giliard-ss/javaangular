@@ -1,3 +1,15 @@
+#JAVA + Angular + Postgres
+
+* Java 1.8
+* Spring Boot Starter Web 2.7.7
+* Postgres 14
+* Hibernate JPA
+* Lombok
+* Angular 15.0.4
+* Node v18.12.1
+* NPM 9.1.2
+* Maven 3.8.1
+
 ###Banco de dados
 
 Executar o prompt e então executar os comandos abaixo para iniciar o banco de dados de exemplo:
