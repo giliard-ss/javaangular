@@ -8,13 +8,13 @@
         <version>2.7.7</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.comurg</groupId>
-    <artifactId>redesol-job</artifactId>
+    <groupId>com.example</groupId>
+    <artifactId>javaangular</artifactId>
     <version>${revision}</version>
     <packaging>pom</packaging>
 
-    <name>redesol-job</name>
-    <description>redesol-job</description>
+    <name>javaangular</name>
+    <description>javaangular</description>
     <properties>
         <revision>1.0.0</revision>
     </properties>
