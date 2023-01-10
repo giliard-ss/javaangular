@@ -16,7 +16,7 @@
     <properties>
         <java.version>1.8</java.version>
         <frontend-bundle-dir>${project.parent.basedir}/frontend/dist/frontend/</frontend-bundle-dir>
-        <start-class>com.comurg.redesoljob.RedesolJobApplication</start-class>
+        <start-class>com.comurg.redesol.RedesolJobApplication</start-class>
     </properties>
     <dependencies>
         <dependency>

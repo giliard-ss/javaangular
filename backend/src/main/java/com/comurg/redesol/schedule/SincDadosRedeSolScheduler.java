@@ -1,4 +1,4 @@
-package com.comurg.redesoljob.schedule;
+package com.comurg.redesol.schedule;
 
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;

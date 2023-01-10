@@ -1,9 +1,8 @@
-package com.comurg.redesoljob;
+package com.comurg.redesol;
 
 import org.springframework.stereotype.Component;
 
 import javax.servlet.*;
-import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
 
 @Component

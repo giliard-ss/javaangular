@@ -1,4 +1,4 @@
-package com.comurg.redesoljob.model;
+package com.comurg.redesol.model;
 
 import lombok.Data;
 

@@ -1,6 +1,6 @@
-package com.comurg.redesoljob.repository;
+package com.comurg.redesol.repository;
 
-import com.comurg.redesoljob.model.Example;
+import com.comurg.redesol.model.Example;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

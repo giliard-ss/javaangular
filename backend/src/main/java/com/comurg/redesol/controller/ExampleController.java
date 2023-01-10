@@ -1,14 +1,12 @@
-package com.comurg.redesoljob.controller;
+package com.comurg.redesol.controller;
 
-import com.comurg.redesoljob.model.Example;
-import com.comurg.redesoljob.repository.ExampleRepository;
+import com.comurg.redesol.model.Example;
+import com.comurg.redesol.repository.ExampleRepository;
 import lombok.AllArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @RestController
