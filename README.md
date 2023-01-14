@@ -25,9 +25,9 @@ Necessário criar a database `example` para rodar o projeto.
 
 ## Compilação
 
-Para compilar o war + angular, executar comando abaixo no diretório raiz
-
 > mvn clean package -P dev
+
+Se preferir compilar um `.war` , alterar o pom da pasta backend de jar para war. 
 
 O projeto frontend possui um arquivo pom que já tem todos os scripts para compilação do projeto angular.
 Os arquivos compilados em angular ficarão em frontend/dist e a compilação do backend busca e copia esses arquivos para o war.
