@@ -1,4 +1,4 @@
-# JAVA 8 + Angular + Postgres
+# JAVA + Angular + Postgres
 
 * Java 1.8
 * Spring Boot Starter Web 2.7.7
@@ -13,48 +13,39 @@
 ## Implementações
 
 * Controle de acesso
-* Parametrização por profiles (dev, prod)
+* Parametrização por profiles (dev/prod)
 * Consumo API Rest
+* CRUD utilizando Hibernate + Postgres
 
 ## Banco de dados
 
-Executar o prompt e então executar os comandos abaixo para criar o banco de dados de exemplo ou utilizar o PgAdmin.
+Necessário criar a database `example` para rodar o projeto.
 
-Conectar no banco com usuário postgres
-> psql -U postgres;
-
-Criar tabela example
 > create database example;
-
-### Produção
-
-Altamente recomendável retirar a propriedade abaixo no arquivo application.properties quando for o ambiente de produção, pois o DBA que deve atender as alterações necessárias de banco.
-
-> spring.jpa.hibernate.ddl-auto=update 
 
 ## Compilação
 
-Para realizar o deploy do war + angular, executar o pom.xml raiz
+Para compilar o war + angular, executar comando abaixo no diretório raiz
 
 > mvn clean package -P dev
 
-O projeto frontend possui um arquivo pom que já tem todos os scripts para compilar o projeto angular.
-Os arquivos compilados em angular ficarão em frontend/dist e a compilação do backend vai buscar e copiar esses arquivos para o war.
+O projeto frontend possui um arquivo pom que já tem todos os scripts para compilação do projeto angular.
+Os arquivos compilados em angular ficarão em frontend/dist e a compilação do backend busca e copia esses arquivos para o war.
 
 ## Angular
 Para inicializar o frontend individualmente, executar o comando abaixo dentro da pasta frontend:
 > npm start
 
 ### AppMaterialModule
-O módulo abaixo reúne todos os módulos de componentes visuais do angular utilizados na aplicação. Bastando apenas importar esse módulo manterá o código mais limpo.
+O módulo abaixo reúne todos os módulos de componentes visuais do Material UI utilizados na aplicação. Basta apenas importar esse módulo nos novos módulos para reaproveitar.
 
 > shared/app-material/app-material.module.ts
 
-## Inicializar o war sem servidor de aplicação
-Para inicializar diretamente , é preciso alterar o pom.xml do backend, de war para jar. Após isso é só executar o comando abaixo para executar o jar.
->java -jar project.jar
+## Inicializar o war por linha de comando
+Para inicializar diretamente é preciso compilar o projeto como `jar` e executar o comando abaixo
+>java -jar javaangular.jar
 
-Se for pela IDE basta executar o método main para rodar o projeto com o server embutido no projeto.
+Se for pela IDE basta executar o método main diretamente.
 
 ## Contexto de Aplicação
 
