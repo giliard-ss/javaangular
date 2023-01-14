@@ -37,7 +37,7 @@ Criar banco de dados `example` no Postgres
 
 > java -jar javaangular-1.0.0.jar
 
-> http://localhost:8080/javaangular/#/login
+> http://localhost:8080/javaangular
 
 
 ## Compilação
