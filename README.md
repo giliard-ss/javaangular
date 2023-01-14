@@ -17,11 +17,29 @@
 * Consumo API Rest
 * CRUD utilizando Hibernate + Postgres
 
-## Banco de dados
+## Get Started
 
-Necessário criar a database `example` para rodar o projeto.
+### Banco de Dados
 
-> create database example;
+Criar banco de dados `example` no Postgres
+
+> create database example
+
+### Aplicação
+
+> git clone https://github.com/giliard-ss/javaangular.git
+
+> cd javaangular
+
+> mvn clean package
+
+> cd backend/target
+
+> java -jar javaangular-1.0.0.jar
+
+> http://localhost:8080/javaangular/#/login
+
+http://localhost:8080/javaangular/#/login
 
 ## Compilação
 
@@ -34,18 +52,18 @@ Os arquivos compilados em angular ficarão em frontend/dist e a compilação do 
 
 ## Angular
 Para inicializar o frontend individualmente, executar o comando abaixo dentro da pasta frontend:
+
 > npm start
 
 ### AppMaterialModule
+
 O módulo abaixo reúne todos os módulos de componentes visuais do Material UI utilizados na aplicação. Basta apenas importar esse módulo nos novos módulos para reaproveitar.
 
 > shared/app-material/app-material.module.ts
 
-## Inicializar o war por linha de comando
-Para inicializar diretamente é preciso compilar o projeto como `jar` e executar o comando abaixo
->java -jar javaangular.jar
+## Inicializar aplicação pela IDE
 
-Se for pela IDE basta executar o método main diretamente.
+Executar o método main da classe MainApplication.java
 
 ## Contexto de Aplicação
 
