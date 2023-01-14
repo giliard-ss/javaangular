@@ -1,15 +1,18 @@
 package com.example;
 
-import com.example.model.Example;
+import com.example.model.ExampleEntity;
 import com.example.repository.ExampleRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.context.annotation.Bean;
+import org.springframework.core.env.Environment;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.web.client.RestTemplate;
 
 import javax.annotation.PostConstruct;
+import java.time.Duration;
 import java.time.LocalDate;
 import java.util.TimeZone;
 
@@ -22,14 +25,20 @@ public class MainApplication {
     }
 
     @PostConstruct
-    public void init(){
+    public void init() {
         // Setting Spring Boot SetTimeZone
         TimeZone.setDefault(TimeZone.getTimeZone("GMT-3"));
     }
 
     @Bean
-    public RestTemplate restTemplate() {
-        return new RestTemplate();
+    public RestTemplate restTemplate(Environment env) {
+        int connectionTimeout = env.getProperty("rest.connection.timeout", Integer.class);
+        int headTimeout = env.getProperty("rest.read.timeout",  Integer.class);
+
+        return new RestTemplateBuilder()
+                .setConnectTimeout(Duration.ofMillis(connectionTimeout))
+                .setReadTimeout(Duration.ofMillis(headTimeout))
+                .build();
     }
 
     @Bean
@@ -39,13 +48,15 @@ public class MainApplication {
             try {
                 exampleRepository.deleteAll();
 
-                Example example = new Example();
+                ExampleEntity example = new ExampleEntity();
                 example.setBirthDate(LocalDate.now());
                 example.setName("Example name");
                 exampleRepository.save(example);
-            }catch (Exception e) {
+            } catch (Exception e) {
                 e.printStackTrace();
             }
         };
     }
+
+
 }
