@@ -1,0 +1,21 @@
+<mat-card>
+  <mat-card-content>
+    <p>
+      Esqueceu a sua senha? Não tem problema!
+      <br />
+      Informe seu e-mail no campo abaixo e lhe enviaremos instruções sobre como
+      redefini-la.
+      <br />
+      <br />
+
+      <mat-form-field appearance="outline">
+        <mat-label>E-mail</mat-label>
+        <input matInput />
+      </mat-form-field>
+    </p>
+  </mat-card-content>
+  <mat-card-actions class="actions" >
+    <button mat-stroked-button color="primary" class="full"   routerLink="../">Cancelar</button>
+    <button mat-raised-button color="primary" class="full"  (click)="enviar()">Enviar</button>
+  </mat-card-actions>
+</mat-card>

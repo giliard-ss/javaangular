@@ -1,0 +1,120 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>
+      Novo Usuário
+    </mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <p>
+      <mat-form-field >
+        <mat-label>Nome</mat-label>
+        <input matInput />
+      </mat-form-field>
+
+      <mat-form-field >
+        <mat-label>CPF</mat-label>
+        <input matInput />
+      </mat-form-field>
+
+      <mat-form-field >
+        <mat-label>E-mail</mat-label>
+        <input matInput />
+      </mat-form-field>
+
+      <mat-form-field >
+        <mat-label>Telefone</mat-label>
+        <input matInput />
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Sexo</mat-label>
+        <mat-select>
+          <mat-option value="M">Masculino</mat-option>
+          <mat-option value="F">Feminino</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Situação</mat-label>
+        <mat-select>
+          <mat-option value="A">Ativo</mat-option>
+          <mat-option value="I">Inativo</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Perfil</mat-label>
+        <mat-select>
+          <mat-option value="C">Normal</mat-option>
+          <mat-option value="M">Master</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field >
+        <mat-label>Cidade</mat-label>
+        <input matInput />
+      </mat-form-field>
+
+      <mat-form-field >
+        <mat-label>Endereço</mat-label>
+        <input matInput />
+      </mat-form-field>
+
+      <mat-form-field >
+        <mat-label>Bairro</mat-label>
+        <input matInput />
+      </mat-form-field>
+
+      <mat-form-field >
+        <mat-label>CEP</mat-label>
+        <input matInput />
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>UF</mat-label>
+        <mat-select>
+          <mat-option value="AC">AC</mat-option>
+          <mat-option value="AL">AL</mat-option>
+          <mat-option value="AP">AP</mat-option>
+          <mat-option value="AM">AM</mat-option>
+          <mat-option value="BA">BA</mat-option>
+          <mat-option value="CE">CE</mat-option>
+          <mat-option value="DF">DF</mat-option>
+          <mat-option value="ES">ES</mat-option>
+          <mat-option value="GO">GO</mat-option>
+          <mat-option value="MA">MA</mat-option>
+          <mat-option value="MT">MT</mat-option>
+          <mat-option value="MS">MS</mat-option>
+          <mat-option value="MG">MG</mat-option>
+          <mat-option value="PA">PA</mat-option>
+          <mat-option value="PB">PB</mat-option>
+          <mat-option value="PR">PR</mat-option>
+          <mat-option value="PE">PE</mat-option>
+          <mat-option value="PI">PI</mat-option>
+          <mat-option value="RJ">RJ</mat-option>
+          <mat-option value="RN">RN</mat-option>
+          <mat-option value="RS">RS</mat-option>
+          <mat-option value="RO">RO</mat-option>
+          <mat-option value="RR">RR</mat-option>
+          <mat-option value="SC">SC</mat-option>
+          <mat-option value="SP">SP</mat-option>
+          <mat-option value="SE">SE</mat-option>
+          <mat-option value="TO">TO</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" >
+        <mat-label>Sistemas</mat-label>
+        <mat-select multiple>
+          <mat-option value="1">GED-COMURG</mat-option>
+          <mat-option value="2">SISTEMA DE FROTA</mat-option>
+          <mat-option value="3">OUTRO</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-raised-button  routerLink="../">Cancelar</button>
+    <button mat-raised-button  color="primary" routerLink="../">Salvar</button>
+  </mat-card-actions>
+</mat-card>

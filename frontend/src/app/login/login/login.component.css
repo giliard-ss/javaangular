@@ -1,0 +1,31 @@
+
+.container{
+  display: flex;
+  height:80%;
+  justify-content: center;
+  align-items: center;
+
+}
+.conteudo-login{
+  display: flex;
+  flex-direction: column;
+}
+
+.card-login{
+  width: 300px;
+  box-shadow: 0px 0px 5px 1px rgb(218 218 218);
+  padding: 5px;
+}
+
+.toobar-spacer {
+  flex: 1 1 auto;
+}
+
+.mat-mdc-card-title{
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(0, 153, 255);
+}
