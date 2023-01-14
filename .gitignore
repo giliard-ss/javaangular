@@ -51,3 +51,5 @@ backend/.idea
 backend/*.iws
 backend/*.iml
 backend/*.ipr
+
+.idea

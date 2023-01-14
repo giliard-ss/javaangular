@@ -1,4 +1,4 @@
-package com.comurg.redesol.schedule;
+package com.example.schedule;
 
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
@@ -7,7 +7,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 @Component
-public class SincDadosRedeSolScheduler {
+public class ExampleScheduler {
 
     //@Scheduled(cron = "0 0 12 * * ?") Todos os dias as 12h
     @Scheduled(cron = "0 0/1 * * * *")
