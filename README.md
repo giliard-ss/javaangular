@@ -39,18 +39,18 @@ Criar banco de dados `example` no Postgres
 
 > http://localhost:8080/javaangular/#/login
 
-http://localhost:8080/javaangular/#/login
 
 ## Compilação
 
 > mvn clean package -P dev
 
-Se preferir compilar um `.war` , alterar o pom da pasta backend de jar para war. 
+Se preferir compilar um `.war` , alterar o atributo `packaging` de jar para war no arquivo pom da pasta backend . 
 
-O projeto frontend possui um arquivo pom que já tem todos os scripts para compilação do projeto angular.
-Os arquivos compilados em angular ficarão em frontend/dist e a compilação do backend busca e copia esses arquivos para o war.
+O projeto frontend possui um arquivo pom com todos os scripts para compilação dos arquivos em angular.
+Os arquivos compilados ficarão em frontend/dist e a compilação do backend busca e copia esses arquivos para o jar/war.
 
 ## Angular
+
 Para inicializar o frontend individualmente, executar o comando abaixo dentro da pasta frontend:
 
 > npm start
