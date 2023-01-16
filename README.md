@@ -19,35 +19,54 @@
 * Job/Task
 * Logging 
 
-## Banco de dados
+## Get Started
 
-Necessário criar a database `example` para rodar o projeto.
+### Banco de Dados
 
-> create database example;
+Criar banco de dados `example` no Postgres
+
+> create database example
+
+### Aplicação
+
+> git clone https://github.com/giliard-ss/javaangular.git
+
+> cd javaangular
+
+> mvn clean package
+
+> cd backend/target
+
+> java -jar javaangular-1.0.0.jar
+
+
+Nesse ponto você já conseguirá acessar a aplicação através do link `http://localhost:8080/javaangular`.
+
 
 ## Compilação
 
 > mvn clean package -P dev
 
-Se preferir compilar um `.war` , alterar o pom da pasta backend de jar para war. 
+Se preferir compilar um `.war` , alterar o atributo `packaging` de jar para war no arquivo pom da pasta backend . 
 
-O projeto frontend possui um arquivo pom que já tem todos os scripts para compilação do projeto angular.
-Os arquivos compilados em angular ficarão em frontend/dist e a compilação do backend busca e copia esses arquivos para o war.
+O projeto frontend possui um arquivo pom com todos os scripts para compilação dos arquivos em angular.
+Os arquivos compilados ficarão em frontend/dist e a compilação do backend busca e copia esses arquivos para o jar/war.
 
 ## Angular
+
 Para inicializar o frontend individualmente, executar o comando abaixo dentro da pasta frontend:
+
 > npm start
 
 ### AppMaterialModule
+
 O módulo abaixo reúne todos os módulos de componentes visuais do Material UI utilizados na aplicação. Basta apenas importar esse módulo nos novos módulos para reaproveitar.
 
 > shared/app-material/app-material.module.ts
 
-## Inicializar o war por linha de comando
-Para inicializar diretamente é preciso compilar o projeto como `jar` e executar o comando abaixo
->java -jar javaangular.jar
+## Inicializar aplicação pela IDE
 
-Se for pela IDE basta executar o método main diretamente.
+Executar o método main da classe MainApplication.java
 
 ## Contexto de Aplicação
 
