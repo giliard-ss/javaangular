@@ -1,0 +1,4 @@
+<configuration>
+    <property name="LOG_DIR" value="logs/server.log" />
+    <appender name=""FILE
+</configuration>
