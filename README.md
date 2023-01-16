@@ -16,6 +16,8 @@
 * Parametrização por profiles (dev/prod)
 * Consumo API Rest
 * CRUD utilizando Hibernate + Postgres
+* Job/Task
+* Logging 
 
 ## Banco de dados
 

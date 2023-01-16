@@ -53,3 +53,4 @@ backend/*.iml
 backend/*.ipr
 
 .idea
+logs

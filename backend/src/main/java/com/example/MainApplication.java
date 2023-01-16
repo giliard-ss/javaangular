@@ -2,6 +2,9 @@ package com.example;
 
 import com.example.model.ExampleEntity;
 import com.example.repository.ExampleRepository;
+import com.example.schedule.ExampleScheduler;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -19,6 +22,8 @@ import java.util.TimeZone;
 @SpringBootApplication
 @EnableScheduling
 public class MainApplication {
+
+    private static Logger logger = LoggerFactory.getLogger(MainApplication.class);
 
     public static void main(String[] args) {
         SpringApplication.run(MainApplication.class, args);
@@ -43,7 +48,6 @@ public class MainApplication {
 
     @Bean
     CommandLineRunner initDatabase(ExampleRepository exampleRepository) {
-        System.out.println("");
         return args -> {
             try {
                 exampleRepository.deleteAll();
@@ -53,7 +57,7 @@ public class MainApplication {
                 example.setName("Example name");
                 exampleRepository.save(example);
             } catch (Exception e) {
-                e.printStackTrace();
+                logger.error("Falha na criação de registro de exemplo!", e);
             }
         };
     }
